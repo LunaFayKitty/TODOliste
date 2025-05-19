@@ -1,0 +1,95 @@
+:root {
+  --txtColor: rgb(0, 0, 0);
+  --bkgColor: rgb(163, 163, 163);
+  --lightgray: rgb(202, 197, 197);
+  --white: white;
+  --mainrosa: rgb(235, 105, 177);
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 5em;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border: solid;
+  padding: 4%;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: var(--mainrosa);
+  font-size: 7rem;
+  margin: 0;
+  padding-bottom: 0.4em;
+  text-decoration: dotted underline;
+}
+h2 {
+  font-size: larger;
+}
+.catimg {
+  border-radius: 50%;
+  border: solid;
+  border-width: 8px;
+}
+
+.closebutton {
+  height: 60px;
+}
+
+div > input {
+  display: flex;
+  width: 100%;
+  height: 2em;
+  border: solid var(--mainrosa);
+}
+::-webkit-input-placeholder {
+  color: var(--lightgray);
+}
+.ToDOListContainer {
+  width: 100%;
+}
+.ToDOListContainer li {
+  display: flex; /* Verwende Flexbox für die Anordnung der Elemente */
+  align-items: center; /* Zentriere die Elemente vertikal */
+}
+.ToDOListContainer li .checkbox {
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.ToDOListContainer li img.closebutton {
+  margin-left: auto; /* Schließen-Symbol ganz rechts */
+}
+
+/*spielerei Häckchen*/
+.checkbox {
+  appearance: none;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.checkbox:checked::before {
+  content: "\2713"; /* Unicode-Code für ein Häkchen */
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 50%;
+  line-height: 1px;
+  font-size: 50px;
+  color: var(--mainrosa); /* Farbe des Häkchens */
+}
+
+@media only screen and (max-width: 777px) {
+  main {
+    width: auto;
+  }
+  body {
+    margin: 1em;
+  }
+}
